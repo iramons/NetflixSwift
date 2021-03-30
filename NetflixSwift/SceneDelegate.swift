@@ -8,20 +8,29 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    private(set) static var shared: SceneDelegate?
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         // substitua o default _ pelo nome windowScene
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        Self.shared = self
+
         // dizer oara a aplicação que irá usar o windowScene
         window = UIWindow(windowScene: windowScene)
         
+        // nossa ViewController principal
+        let feedVC = FeedMovieViewController()
+        
+        // instancia uma NavigationController para trabalharmos com navegação
+        let navVC = UINavigationController(rootViewController: feedVC)
+        
         // tornar a ViewController como RootViewController
-        window?.rootViewController = ViewController()
+        window?.rootViewController = navVC
         
         // torná-la visível
         window?.makeKeyAndVisible()

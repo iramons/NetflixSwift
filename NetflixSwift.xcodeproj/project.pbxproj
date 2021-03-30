@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		AB05C7C32612B30D0062577E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7C22612B30D0062577E /* AppDelegate.swift */; };
 		AB05C7C52612B30D0062577E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7C42612B30D0062577E /* SceneDelegate.swift */; };
-		AB05C7C72612B30D0062577E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7C62612B30D0062577E /* ViewController.swift */; };
+		AB05C7C72612B30D0062577E /* FeedMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7C62612B30D0062577E /* FeedMovieViewController.swift */; };
 		AB05C7CC2612B30E0062577E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB05C7CB2612B30E0062577E /* Assets.xcassets */; };
 		AB05C7CF2612B30E0062577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB05C7CD2612B30E0062577E /* LaunchScreen.storyboard */; };
+		AB05C7DB2612C4E40062577E /* NetflixAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7DA2612C4E40062577E /* NetflixAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB05C7BF2612B30D0062577E /* NetflixSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB05C7C22612B30D0062577E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB05C7C42612B30D0062577E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB05C7C62612B30D0062577E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB05C7C62612B30D0062577E /* FeedMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMovieViewController.swift; sourceTree = "<group>"; };
 		AB05C7CB2612B30E0062577E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB05C7CE2612B30E0062577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB05C7D02612B30E0062577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB05C7DA2612C4E40062577E /* NetflixAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetflixAPI.swift; path = ../../NetflixAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 			children = (
 				AB05C7C22612B30D0062577E /* AppDelegate.swift */,
 				AB05C7C42612B30D0062577E /* SceneDelegate.swift */,
-				AB05C7C62612B30D0062577E /* ViewController.swift */,
+				AB05C7C62612B30D0062577E /* FeedMovieViewController.swift */,
 				AB05C7CB2612B30E0062577E /* Assets.xcassets */,
 				AB05C7CD2612B30E0062577E /* LaunchScreen.storyboard */,
 				AB05C7D02612B30E0062577E /* Info.plist */,
+				AB05C7DA2612C4E40062577E /* NetflixAPI.swift */,
 			);
 			path = NetflixSwift;
 			sourceTree = "<group>";
@@ -133,9 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB05C7C72612B30D0062577E /* ViewController.swift in Sources */,
+				AB05C7C72612B30D0062577E /* FeedMovieViewController.swift in Sources */,
 				AB05C7C32612B30D0062577E /* AppDelegate.swift in Sources */,
 				AB05C7C52612B30D0062577E /* SceneDelegate.swift in Sources */,
+				AB05C7DB2612C4E40062577E /* NetflixAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
