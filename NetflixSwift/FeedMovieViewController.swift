@@ -10,6 +10,11 @@ import UIKit
 // extenderemos uma UITableViewController para mostrar a lista de collectionView
 class FeedMovieViewController: UITableViewController {
     
+    //constant criada para evitar ficar reescrevendo a string
+    let cellId = "cellId"
+    
+    var feedMovie: FeedMovie?
+    
     // criando loading view
     // no momento que é declarada, torna executavel,
     // já é carrega quando a classe é carregada
@@ -26,8 +31,21 @@ class FeedMovieViewController: UITableViewController {
         
         setupIndicatorView()
         
-        // pega a unica instancia de NetflixAPI e chama o método request()
-        NetflixAPI.shared.request()
+        setupViews()
+        
+        // pega a unica instancia de NetflixAPI
+        let api = NetflixAPI.shared
+        
+        // aqui tornar essa classe concreta
+        api.delegate = self
+        
+        // e chama o método request()
+        api.request()
+    }
+    
+    private func setupViews() {
+        // registra o tipo de celula a ser retornado
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
     // aplica um indicator sobre a tela
@@ -63,3 +81,39 @@ class FeedMovieViewController: UITableViewController {
 
 }
 
+// assinar o FeedMovieDelegate
+extension FeedMovieViewController: FeedMovieDelegate {
+    
+    // quando assinar, deve implementar o corpo do delegate
+    func response(status: Int, feed: FeedMovie) {
+        progressView.removeFromSuperview() // remove a progressView da tela
+        if status == 200 {
+            self.feedMovie = feed
+        }
+    }
+}
+
+extension FeedMovieViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        //define que o numero de seção será somente 1
+        return 1
+    }
+    
+    // numero de linhas em uma seção
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // dequeueReusableCell pega uma célula que ele já criou anteriormente em memória e seta um novo valor pra ela
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId)!
+        
+        // a cada celula nós printamos o valor do indexPath.row
+        cell.textLabel?.text = String(indexPath.row)
+        
+        return cell
+    }
+    
+}

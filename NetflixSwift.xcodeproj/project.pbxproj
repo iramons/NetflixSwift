@@ -13,6 +13,7 @@
 		AB05C7CC2612B30E0062577E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB05C7CB2612B30E0062577E /* Assets.xcassets */; };
 		AB05C7CF2612B30E0062577E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB05C7CD2612B30E0062577E /* LaunchScreen.storyboard */; };
 		AB05C7DB2612C4E40062577E /* NetflixAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7DA2612C4E40062577E /* NetflixAPI.swift */; };
+		AB05C7DE26138BF20062577E /* FeedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05C7DD26138BF20062577E /* FeedMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB05C7CE2612B30E0062577E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB05C7D02612B30E0062577E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB05C7DA2612C4E40062577E /* NetflixAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetflixAPI.swift; path = ../../NetflixAPI.swift; sourceTree = "<group>"; };
+		AB05C7DD26138BF20062577E /* FeedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AB05C7CD2612B30E0062577E /* LaunchScreen.storyboard */,
 				AB05C7D02612B30E0062577E /* Info.plist */,
 				AB05C7DA2612C4E40062577E /* NetflixAPI.swift */,
+				AB05C7DD26138BF20062577E /* FeedMovie.swift */,
 			);
 			path = NetflixSwift;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				AB05C7C32612B30D0062577E /* AppDelegate.swift in Sources */,
 				AB05C7C52612B30D0062577E /* SceneDelegate.swift in Sources */,
 				AB05C7DB2612C4E40062577E /* NetflixAPI.swift in Sources */,
+				AB05C7DE26138BF20062577E /* FeedMovie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
